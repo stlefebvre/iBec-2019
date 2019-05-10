@@ -3,6 +3,10 @@
   src: url("../fonts/38FA35_0_0.eot");
   src: url("../fonts/38FA35_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/38FA35_0_0.woff2") format("woff2"), url("../fonts/38FA35_0_0.woff") format("woff"), url("../fonts/38FA35_0_0.ttf") format("truetype"); }
 
+body {
+  background: #F0485D;
+}
+
 * {
   font-family: 'Source Sans Pro', sans-serif; 
 }
@@ -51,6 +55,10 @@ strong {
 .card__title {
   margin-top: 100px;
 }
+
+.card__content .card__header--desktop {
+  display: none;
+}
 /* * {
   box-sizing: border-box;
 } */
@@ -69,16 +77,22 @@ button {
   transform: rotate(180deg);
 }
 
-footer {
+.card__footer {
   margin-bottom: 50px;
 }
 
 a {
-  border: solid 2px white;
+  border: solid 2px #FFFFFF;
   padding: 5px 10px;
   vertical-align: middle;
   text-decoration: none;
   color: #FFFFFF;
+  border-radius: 25px;
+}
+
+a:hover {
+  background-color: #FFFFFF;
+  color: #F0485D;
 }
 
 @media (min-width: 600px) {
@@ -99,15 +113,19 @@ a {
     display: initial;
   }
 
-  .card__header {
+  .card__header, button {
     display: none;
   }
 
-  .card__header--desktop {
+  .card__content .card__header--desktop {
     display: unset;
   }
 
-  button {
+  .card__content .card__footer--desktop {
+    display: inline;
+  }
+
+  .card__footer {
     display: none;
   }
 }
